@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link href="http://vjs.zencdn.net/5.0/video-js.css" rel="stylesheet" type="text/css">
+  <script src="http://vjs.zencdn.net/ie8/1.1.0/videojs-ie8.min.js"></script>
+  <script src="http://vjs.zencdn.net/5.0/video.js"></script>
+  <style>
+      body{
+          max-width: 640px;
+      }
+  </style>
+</head>
+<body>
+  <video id="videoarea" class="video-js vjs-default-skin vjs-fluid" 
+        controls preload="auto" responsive="true" >
+    <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4"/>      
+ </video>
+  <script>
+        var container = document.getElementById("videoarea");
+        videojs(container, {
+            controls: true,
+            class:'video-js vjs-default-skin',
+            techOrder: ["html5", "flash"]
+        }, function() {
+        });
+    </script>
+</body>
+</html>
